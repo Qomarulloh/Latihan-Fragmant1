@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@+id/satuFragment">
+
+    <fragment
+        android:id="@+id/satuFragment"
+        android:name="com.example.android.whatsapp.SatuFragment"
+        android:label="SatuFragment"
+        tools:layout="@layout/fragment_satu">
+        <action
+            android:id="@+id/action_satuFragment_to_duaFragment"
+            app:destination="@id/duaFragment"
+            app:popUpTo="@+id/satuFragment"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/duaFragment"
+        android:name="com.example.android.whatsapp.DuaFragment"
+        android:label="DuaFragment"
+        tools:layout="@layout/fragment_dua">
+        <action
+            android:id="@+id/action_duaFragment_to_tigaFragment"
+            app:destination="@id/tigaFragment"
+            app:popUpTo="@+id/satuFragment" />
+        <action
+            android:id="@+id/action_duaFragment_to_empatFragment3"
+            app:destination="@id/empatFragment"
+            app:popUpTo="@+id/satuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/tigaFragment"
+        android:name="com.example.android.whatsapp.TigaFragment"
+        android:label="TigaFragment"
+        tools:layout="@layout/fragment_tiga">
+        <action
+            android:id="@+id/action_tigaFragment_to_duaFragment"
+            app:destination="@id/duaFragment"
+            app:popUpTo="@+id/satuFragment"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/empatFragment"
+        android:name="com.example.android.whatsapp.EmpatFragment"
+        android:label="EmpatFragment"
+        tools:layout="@layout/fragment_empat">
+        <action
+            android:id="@+id/action_empatFragment_to_duaFragment"
+            app:destination="@id/duaFragment"
+            app:popUpTo="@+id/satuFragment"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/limaFragment"
+        android:name="com.example.android.whatsapp.LimaFragment"
+        android:label="LimaFragment" />
+    <fragment
+        android:id="@+id/enamFragment"
+        android:name="com.example.android.whatsapp.EnamFragment"
+        android:label="EnamFragment" />
+</navigation>
